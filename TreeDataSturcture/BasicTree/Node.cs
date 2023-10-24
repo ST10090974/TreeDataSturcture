@@ -13,10 +13,16 @@ namespace TreeDataSturcture.BasicTree
         public Node Parent { get; set; }
         public List<Node> Children { get; set; }
 
-        public Node(int data)
+        public Node(int data, Node parent)
         {
             Data = data;
             Children = new List<Node>();
+            Parent = parent;
+        }
+
+        public Node()
+        {
+            
         }
 
         public override string ToString()
