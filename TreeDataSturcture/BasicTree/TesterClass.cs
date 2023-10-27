@@ -46,31 +46,23 @@ namespace TreeDataSturcture.BasicTree
             //}
             //#endregion 
 
-            Tree tr = new Tree(new Node(7, null));
-            tr.Root.Children = new List<Node>()
-        {
-            new Node(5, tr.Root),
-            new Node(8, tr.Root),
-        };
+        Tree tr = new Tree(new Node(7, null));
+        tr.Root.addNode(5);
+        tr.Root.addNode(8);
 
-            tr.Root.Children[0].Children = new List<Node>()
-        {
-            new Node(2, tr.Root.Children[0]),
-            new Node(3, tr.Root.Children[0]),
-            new Node(1, tr.Root.Children[0]),
-        };
 
-            tr.Root.Children[0].Children[0].Children = new List<Node>()
-        {
-            new Node(13, tr.Root.Children[0].Children[0]),
-            new Node(6, tr.Root.Children[0].Children[0]),
-        };
+        tr.Root.Children[0].addNode(2);
+        tr.Root.Children[0].addNode(3);
+        tr.Root.Children[0].addNode(1);
 
-            tr.Root.Children[1].Children = new List<Node>()
-        {
-            new Node(10, tr.Root.Children[1]),
-            new Node(12, tr.Root.Children[1]),
-        };
+
+        tr.Root.Children[0].Children[0].addNode(13);
+        tr.Root.Children[0].Children[0].addNode(6);
+
+
+        tr.Root.Children[1].addNode(10);
+        tr.Root.Children[1].addNode(12);
+
 
             genTree(tr.Root,0);
             //foreach (Node x in tr.Root.Children)
