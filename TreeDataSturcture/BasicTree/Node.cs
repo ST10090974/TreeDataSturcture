@@ -20,10 +20,11 @@ namespace TreeDataSturcture.BasicTree
             Parent = parent;
         }
 
-        public void addNode(int data)
+        public Node addNode(int data)
         {
             Node newNode = new Node(data, this);
             this.Children.Add(newNode);
+            return this;
         }
         public Node()
         {

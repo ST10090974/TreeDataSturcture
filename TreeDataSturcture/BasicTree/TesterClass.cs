@@ -46,22 +46,25 @@ namespace TreeDataSturcture.BasicTree
             //}
             //#endregion 
 
-        Tree tr = new Tree(new Node(7, null));
-        tr.Root.addNode(5);
-        tr.Root.addNode(8);
+        Tree tr = new Tree(new Node(5, null));
 
 
-        tr.Root.Children[0].addNode(2);
-        tr.Root.Children[0].addNode(3);
-        tr.Root.Children[0].addNode(1);
+
+        //tr.Root.addNode(5);
+        //tr.Root.addNode(8);
 
 
-        tr.Root.Children[0].Children[0].addNode(13);
-        tr.Root.Children[0].Children[0].addNode(6);
+        //tr.Root.Children[0].addNode(2);
+        //tr.Root.Children[0].addNode(3);
+        //tr.Root.Children[0].addNode(1);
 
 
-        tr.Root.Children[1].addNode(10);
-        tr.Root.Children[1].addNode(12);
+        //tr.Root.Children[0].Children[0].addNode(13);
+        //tr.Root.Children[0].Children[0].addNode(6);
+
+
+        //tr.Root.Children[1].addNode(10);
+        //tr.Root.Children[1].addNode(12);
 
 
             genTree(tr.Root,0);
