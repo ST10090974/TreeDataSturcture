@@ -9,15 +9,18 @@ namespace TreeDataSturcture.BasicTree
     public class Tree
     {
         public Node Root { get; set; }
-        public List<Node> Nodes { get; set; }
+        public List<Node> Nodes { get; set; } = new List<Node>();
 
         private Stack<Node> _st = new Stack<Node>();
         
 
-        public Tree(Node root)
-        {
-            Root = root;
-        }
+        //public Tree(Node root)
+        //{
+        //    Nodes = new List<Node>();
+        //    Root = root;
+        //   Nodes.Add(root);
+        //    _st.Push(root);
+        //}
 
         public Tree StartBranch(int Data)
         {

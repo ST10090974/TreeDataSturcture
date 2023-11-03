@@ -46,8 +46,21 @@ namespace TreeDataSturcture.BasicTree
             //}
             //#endregion 
 
-        Tree tr = new Tree(new Node(5, null));
-
+            Tree tr = new Tree()
+                .StartBranch(5)
+                .CloseBranch()
+                    .StartBranch(1)
+                        .Add(6)
+                        .Add(3)
+                        .Add(7)
+                    .CloseBranch()
+                    .StartBranch(2)
+                        .StartBranch(3)
+                            .Add(7)
+                        .CloseBranch()
+                    .CloseBranch();
+                
+        
 
 
         //tr.Root.addNode(5);
@@ -67,19 +80,23 @@ namespace TreeDataSturcture.BasicTree
         //tr.Root.Children[1].addNode(12);
 
 
-            genTree(tr.Root,0);
-            //foreach (Node x in tr.Root.Children)
-            //{
-            //    Console.WriteLine(x);
-            //    foreach (Node y in x.Children)
-            //    {
-            //        Console.WriteLine("     " + y);
-            //        foreach (Node z in y.Children)
-            //        {
-            //            Console.WriteLine("             " + z);
-            //        }
-            //    }
-            //}
+            //genTree(tr.Root,0);
+            foreach (Node x in tr.Nodes)
+            {
+                Console.WriteLine(x);
+                foreach (Node y in x.Children)
+                {
+                    Console.WriteLine("     " + y);
+                    foreach (Node z in y.Children)
+                    {
+                        Console.WriteLine("             " + z);
+                        foreach (Node i in z.Children)
+                        {
+                            Console.WriteLine("                 " + i);
+                        }
+                    }
+                }
+            }
 
 
             Console.ReadKey();

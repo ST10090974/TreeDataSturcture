@@ -33,7 +33,7 @@ namespace TreeDataSturcture.BasicTree
 
         public override string ToString()
         {
-            return $"Data: ({Data}), Parent: ({Parent.Data})";
+            return $"Data: ({Data})";
         }
     }
 
